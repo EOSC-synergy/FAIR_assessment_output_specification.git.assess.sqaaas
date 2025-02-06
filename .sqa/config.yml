@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/OSTrails/FAIR_assessment_output_specification:
+      branch: main
+      repo: https://github.com/OSTrails/FAIR_assessment_output_specification.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/OSTrails/FAIR_assessment_output_specification git:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-rust-dog.sh
+        container: qc.acc_trippy-denim-lion
+  QC.Doc:
+    repos:
+      github.com/OSTrails/FAIR_assessment_output_specification find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-aquamarine-bulldog.sh
+        container: qc.doc_cloudy-goldenrod-giraffe
+      github.com/OSTrails/FAIR_assessment_output_specification git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-xanthic-zebra.sh
+        container: qc.doc_sickly-denim-badger
+      github.com/OSTrails/FAIR_assessment_output_specification markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-red-pinscher.sh
+        container: qc.doc_gimpy-goldenrod-sheep
+  QC.Lic:
+    repos:
+      github.com/OSTrails/FAIR_assessment_output_specification licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-corn-kudu.sh
+        container: qc.lic_fuzzy-pumpkin-ragdoll
+  QC.Sty:
+    repos:
+      github.com/OSTrails/FAIR_assessment_output_specification jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-charcoal-boar.sh
+        container: qc.sty_seedy-brown-lizard
+  QC.Ver:
+    repos:
+      github.com/OSTrails/FAIR_assessment_output_specification get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-khaki-worm.sh
+        container: qc.ver_shabby-razzmatazz-spoonbill
+timeout: 5400
