@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/OSTrails/FAIR_assessment_output_specification git:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-rust-dog.sh
-        container: qc.acc_trippy-denim-lion
+        - /usr/bin/env sh .sqa/script.sleazy-celadon-camel.sh
+        container: qc.acc_flimsy-orchid-sparrow
   QC.Doc:
     repos:
       github.com/OSTrails/FAIR_assessment_output_specification find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-aquamarine-bulldog.sh
-        container: qc.doc_cloudy-goldenrod-giraffe
+        - /usr/bin/env sh .sqa/script.whiny-amber-llama.sh
+        container: qc.doc_cheeky-lilac-dollar
       github.com/OSTrails/FAIR_assessment_output_specification git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-xanthic-zebra.sh
-        container: qc.doc_sickly-denim-badger
+        - /usr/bin/env sh .sqa/script.wiggy-cobalt-bobcat.sh
+        container: qc.doc_tasty-cream-camel
       github.com/OSTrails/FAIR_assessment_output_specification markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-red-pinscher.sh
-        container: qc.doc_gimpy-goldenrod-sheep
+        - /usr/bin/env sh .sqa/script.fuzzy-lemon-malamute.sh
+        container: qc.doc_sleazy-gold-bonobo
   QC.Lic:
     repos:
       github.com/OSTrails/FAIR_assessment_output_specification licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-corn-kudu.sh
-        container: qc.lic_fuzzy-pumpkin-ragdoll
+        - /usr/bin/env sh .sqa/script.smelly-ecru-earwig.sh
+        container: qc.lic_bluesy-periwinkle-buffalo
   QC.Sty:
     repos:
       github.com/OSTrails/FAIR_assessment_output_specification jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-charcoal-boar.sh
-        container: qc.sty_seedy-brown-lizard
+        - /usr/bin/env sh .sqa/script.bluesy-khaki-walrus.sh
+        container: qc.sty_muggy-khaki-yak
   QC.Ver:
     repos:
       github.com/OSTrails/FAIR_assessment_output_specification get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-khaki-worm.sh
-        container: qc.ver_shabby-razzmatazz-spoonbill
+        - /usr/bin/env sh .sqa/script.ugly-pink-iguana.sh
+        container: qc.ver_cheeky-sangria-fox
 timeout: 5400
